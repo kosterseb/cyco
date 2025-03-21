@@ -1,0 +1,159 @@
+{
+	"categories": [
+		{
+			"id": "cat-001",
+			"name": "Cykler",
+			"products": [
+				{
+					"id": "cyk-001",
+					"title": "Cykel1",
+					"image": "/api/placeholder/400/300",
+					"description": "En højkvalitets cykel designet til bykørsel med komfort og holdbarhed i fokus.",
+					"price": 5499.0
+				},
+				{
+					"id": "cyk-002",
+					"title": "Cykel2",
+					"image": "/api/placeholder/400/300",
+					"description": "Perfekt til længere distancer med letløbende hjul og ergonomisk siddestilling.",
+					"price": 7299.0
+				},
+				{
+					"id": "cyk-003",
+					"title": "Cykel3",
+					"image": "/api/placeholder/400/300",
+					"description": "Robust mountainbike til eventyr i skoven og på ujævne stier.",
+					"price": 8999.0
+				}
+			]
+		},
+		{
+			"id": "cat-002",
+			"name": "Cykel udstyr",
+			"products": [
+				{
+					"id": "cud-001",
+					"title": "Flaskeholdere",
+					"image": "/api/placeholder/400/300",
+					"description": "Letvægts flaskeholder i aluminium, nem at montere på alle cykelrammer.",
+					"price": 149.0
+				},
+				{
+					"id": "cud-002",
+					"title": "Tasker og opbevaring",
+					"image": "/api/placeholder/400/300",
+					"description": "Vandtæt cykeltaske med rigelig plads til personlige ejendele og værktøj.",
+					"price": 399.0
+				},
+				{
+					"id": "cud-003",
+					"title": "Hjelme",
+					"image": "/api/placeholder/400/300",
+					"description": "Sikker og behagelig cykelhjelm med justerbar pasform og god ventilation.",
+					"price": 599.0
+				}
+			]
+		},
+		{
+			"id": "cat-003",
+			"name": "Cykel dele",
+			"products": [
+				{
+					"id": "cdl-001",
+					"title": "Dæk",
+					"image": "/api/placeholder/400/300",
+					"description": "Punkteringssikre dæk med god vejgreb i alle vejrforhold.",
+					"price": 349.0
+				},
+				{
+					"id": "cdl-002",
+					"title": "Sadler",
+					"image": "/api/placeholder/400/300",
+					"description": "Ergonomisk designet sadel for maksimal komfort på længere ture.",
+					"price": 499.0
+				},
+				{
+					"id": "cdl-003",
+					"title": "Styr",
+					"image": "/api/placeholder/400/300",
+					"description": "Letvægts styr i aluminium med komfortabel grebsoverflade.",
+					"price": 429.0
+				}
+			]
+		},
+		{
+			"id": "cat-004",
+			"name": "Kaffe",
+			"products": [
+				{
+					"id": "kaf-001",
+					"title": "Mørk ristet",
+					"image": "/api/placeholder/400/300",
+					"description": "Intens og fyldig kaffe med noter af chokolade og karamel, perfekt til espresso.",
+					"price": 89.0
+				},
+				{
+					"id": "kaf-002",
+					"title": "Lyst ristet",
+					"image": "/api/placeholder/400/300",
+					"description": "Frisk og frugtig kaffe med lysere ristning, fremhæver kaffens naturlige sødme.",
+					"price": 89.0
+				}
+			]
+		},
+		{
+			"id": "cat-005",
+			"name": "Kaffe maskiner",
+			"products": [
+				{
+					"id": "kma-001",
+					"title": "Espresso maskiner",
+					"image": "/api/placeholder/400/300",
+					"description": "Professionel espressomaskine til hjemmebrug med præcis temperaturkontrol.",
+					"price": 3999.0
+				},
+				{
+					"id": "kma-002",
+					"title": "Kaffekværne",
+					"image": "/api/placeholder/400/300",
+					"description": "Konisk kværn med 40 indstillinger for optimal maling til enhver bryggemetode.",
+					"price": 1299.0
+				},
+				{
+					"id": "kma-003",
+					"title": "Aeropress",
+					"image": "/api/placeholder/400/300",
+					"description": "Innovative kaffepresser som kombinerer immersion og trykfiltrering for en ren kop kaffe.",
+					"price": 349.0
+				}
+			]
+		},
+		{
+			"id": "cat-006",
+			"name": "Kaffe udstyr",
+			"products": [
+				{
+					"id": "kud-001",
+					"title": "Portafilter",
+					"image": "/api/placeholder/400/300",
+					"description": "Kvalitets portafilter i rustfrit stål, kompatibel med de fleste espressomaskiner.",
+					"price": 599.0
+				},
+				{
+					"id": "kud-002",
+					"title": "Vægte",
+					"image": "/api/placeholder/400/300",
+					"description": "Præcis digital vægt med timer, ideel til konsistente kaffebrygninger.",
+					"price": 399.0
+				},
+				{
+					"id": "kud-003",
+					"title": "Baskets",
+					"image": "/api/placeholder/400/300",
+					"description": "Præcisionsfilterbaskets i høj kvalitet for optimal ekstraktion.",
+					"price": 249.0
+				}
+			]
+		}
+	]
+}
