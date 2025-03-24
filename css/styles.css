@@ -9,7 +9,7 @@ body {
 .background {
     width: 10px;
     position: absolute;
-    background-image: url(https://www.ambmag.com.au/wp-content/uploads/2024/08/0_0_0_0_70__Features_BCBR19_4_0080_MR.jpg);
+    background: url(https://www.ambmag.com.au/wp-content/uploads/2024/08/0_0_0_0_70__Features_BCBR19_4_0080_MR.jpg);
 }
 
 .logo {
