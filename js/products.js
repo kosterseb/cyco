@@ -29,4 +29,3 @@ function spitItOut(name, title, image, description, price) {
 	document.body.innerHTML += `<p>${price * 1.25} kr</p>`;
 	document.body.innerHTML += `</div>`;
 }
-//test2
