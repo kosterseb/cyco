@@ -4,17 +4,24 @@ body {
     margin: 0;
     padding: 0;
 }
-
-main a img {
-    width: 200px;
-    display: flex;
-    justify-content: center;
+.background {
+    width: 100%;
+    position: absolute;
     
 }
 
-nav a {
+.logo {
+    width: 200px;
+    position: absolute;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 50%;
+}
+
+
+header nav a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     margin: 0 15px;
-    font-size: 18px;
+    font-size: 30px;
   }
