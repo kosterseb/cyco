@@ -1,34 +1,72 @@
-body {
-    font-family: "Poppins", sans-serif;
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
     background-image: url(https://videos.pexels.com/video-files/15552891/15552891-uhd_1440_2560_24fps.mp4);
-    ;
+    margin: 0;
+    padding: 0;
+}
+
+main div a h1 {
+    width: 120px;
+    z-index: 1000;
+    position: absolute;
+    margin-top: 100px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 23px;
+    padding: 10px;
+    text-align: center;
 }
 
 .background {
     width: 100%;
     position: fixed;
+    object-fit: cover;
+    flex-direction: column;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
     position: absolute;
-    left: 20px;
-    margin-top: 10%;
-    background-color: aliceblue;
+    background-color: white;
+    z-index: 1001;
 }
 
 header {
-    background-color: aliceblue;
-    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 12.2px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
+
 
 header nav a {
     color: rgb(0, 0, 0);
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 5px;
     font-size: 20px;
