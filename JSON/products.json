@@ -6,21 +6,21 @@
 			"products": [
 				{
 					"id": "cyk-001",
-					"title": "Cykel1",
+					"title": "City bike",
 					"image": "https://drive.google.com/thumbnail?id=19GjGJK2f3hSkm8COXswbHLZ74PMM0MGS",
 					"description": "En højkvalitets cykel designet til bykørsel med komfort og holdbarhed i fokus.",
 					"price": 5499
 				},
 				{
 					"id": "cyk-002",
-					"title": "Cykel2",
+					"title": "Racer cykel",
 					"image": "https://drive.google.com/thumbnail?id=1olY-Jyy11pO1o93lvvsyjF1iBxN0nItW",
 					"description": "Perfekt til længere distancer med letløbende hjul og ergonomisk siddestilling.",
 					"price": 7299
 				},
 				{
 					"id": "cyk-003",
-					"title": "Cykel3",
+					"title": "Mountainbike",
 					"image": "https://drive.google.com/thumbnail?id=1IVyT4LIfcf33LCpO2cnvUBuidqRpqeIE",
 					"description": "Robust mountainbike til eventyr i skoven og på ujævne stier.",
 					"price": 8999
