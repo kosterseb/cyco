@@ -11,4 +11,4 @@ shopIcon.addEventListener('click', toggleCart);
 closeCart.addEventListener('click', toggleCart);
 
 
-//test
+//test2
