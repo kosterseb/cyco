@@ -8,16 +8,12 @@ body {
 header {
   background-color: #ffffff;
   color: white;
-  /* padding: 20px; */
+  padding: 20px;
   text-align: center;
 }
 
-nav a img {
-  
-}
-
 header img {
-  width: 200px;
+  width: 100px;
 }
 
 header div img {
