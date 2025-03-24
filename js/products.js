@@ -1,4 +1,3 @@
-let products = ['Cykler', 'Cykel udstyr', 'Cykel dele'];
 
 document.addEventListener('DOMContentLoaded', function (event) {
 	fetch('/JSON/products.json')
@@ -8,26 +7,26 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		.then(function (myJson) {
 			//console.log(myJson);
 
-			let keys = Object.keys(myJson);
-
-			keys.forEach(function (element) {
-				console.log(myJson.categories[0].products);
-
-				spitItOut(
-					myJson.categories[0].name,
-					myJson.categories[0].products[0].title,
-					myJson.categories[0].products[0].image,
-					myJson.categories[0].products[0].description,
-					myJson.categories[0].products[0].price
-				);
+			myJson.categories.forEach(function (category) {
+				category.products.forEach(function (product) {
+					spitItOut(
+						category.name,
+						product.title,
+						product.image,
+						product.description,
+						product.price
+					);
+				});
 			});
 		});
 });
 
 function spitItOut(name, title, image, description, price) {
+	document.body.innerHTML += `<div class="product">`;
 	document.body.innerHTML += `<h1>${name}</h1>`;
 	document.body.innerHTML += `<h2>${title}</h2>`;
-	document.body.innerHTML += `<img src="${image}">`;
+	document.body.innerHTML += `<img src="${image}" alt="${title}">`;
 	document.body.innerHTML += `<p>${description}</p>`;
-	document.body.innerHTML += `<p>${price}</p>`;
+	document.body.innerHTML += `<p>${price * 1.25} kr</p>`;
+	document.body.innerHTML += `</div>`;
 }
