@@ -3,31 +3,34 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-image: url(https://www.ambmag.com.au/wp-content/uploads/2024/08/0_0_0_0_70__Features_BCBR19_4_0080_MR.jpg);
+    background-image: url(https://videos.pexels.com/video-files/15552891/15552891-uhd_1440_2560_24fps.mp4);
+    ;
 }
 
 .background {
-    width: 10px;
-    position: absolute;
-    background: url(https://www.ambmag.com.au/wp-content/uploads/2024/08/0_0_0_0_70__Features_BCBR19_4_0080_MR.jpg);
+    width: 100%;
+    position: fixed;
 }
 
 .logo {
+    width: 150px;
+    height: 150px;
     position: absolute;
-    left: 0px;
-    margin-top: 0%;
+    left: 20px;
+    margin-top: 10%;
     background-color: aliceblue;
 }
 
 header {
     background-color: aliceblue;
-    padding: 5px;
+    padding: 10px;
 }
+
 header nav a {
     color: rgb(0, 0, 0);
     background-color: aliceblue;
     text-decoration: none;
     padding: 5px;
     font-size: 20px;
-
+    cursor: pointer;
 }
