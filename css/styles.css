@@ -1,0 +1,33 @@
+body {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://www.ambmag.com.au/wp-content/uploads/2024/08/0_0_0_0_70__Features_BCBR19_4_0080_MR.jpg);
+}
+
+.background {
+    width: 10px;
+    position: absolute;
+    background: url(https://www.ambmag.com.au/wp-content/uploads/2024/08/0_0_0_0_70__Features_BCBR19_4_0080_MR.jpg);
+}
+
+.logo {
+    position: absolute;
+    left: 0px;
+    margin-top: 0%;
+    background-color: aliceblue;
+}
+
+header {
+    background-color: aliceblue;
+    padding: 5px;
+}
+header nav a {
+    color: rgb(0, 0, 0);
+    background-color: aliceblue;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 20px;
+
+}
