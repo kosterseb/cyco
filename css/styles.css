@@ -131,6 +131,7 @@ header nav a:hover {
 .marquee-content {
     display: inline-block;
     animation: marquee 20s linear infinite;
+    padding: 0 0.25em;
 }
 
 @keyframes marquee {
