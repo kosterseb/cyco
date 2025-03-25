@@ -5,14 +5,17 @@
 }
 
 #main {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    row-gap: 5px;
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
 }
 
+.category-products {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 5px;
+	padding: 5px;
+}
 
-
-.product {
-    padding: 20px;
+.product img {
 }
