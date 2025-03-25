@@ -125,6 +125,7 @@ header nav a:hover {
     overflow: hidden;
     white-space: nowrap;
     padding: 10px 0;
+    width: 100%;
 }
 
 .marquee-content {
