@@ -49,11 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <input id="qty-${product.id}" type="number" value="1" min="1">
                 <button onclick="addCart('${
 									product.id
-								}', parseInt(document.getElementById('qty-${product.id}').value, 10) || 1)">Add To Cart</button>
+								}', parseInt(document.getElementById('qty-${product.id}').value, 10) || 1); openCard();">Add To Cart</button>
            </div>
         `;
-    }
-    
+	}
 });
-
-
