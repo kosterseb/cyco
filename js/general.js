@@ -106,50 +106,48 @@ function placeRandomBackgroundImages() {
     backgroundContainer.style.zIndex = '-2';
     backgroundContainer.style.overflow = 'hidden';
 
-    // Keep track of placed images to prevent overlap
-    const placedImages = [];
+    // Create a grid to place images without overlap
+    const gridColumns = 4;
+    const gridRows = 3;
+    const gridPositions = [];
 
-    function isOverlapping(newRect) {
-        return placedImages.some(existingImg => {
-            const existingRect = existingImg.getBoundingClientRect();
-            return !(
-                newRect.right < existingRect.left || 
-                newRect.left > existingRect.right || 
-                newRect.bottom < existingRect.top || 
-                newRect.top > existingRect.bottom
-            );
-        });
+    // Shuffle images to randomize placement
+    for (let i = backgroundImages.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [backgroundImages[i], backgroundImages[j]] = [backgroundImages[j], backgroundImages[i]];
     }
 
-    function placeImage(imageUrl) {
-        const img = document.createElement('img');
-        img.src = imageUrl;
-        img.style.position = 'absolute';
-        img.style.width = `${Math.random() * 300 + 100}px`; // Random width between 100-300px
-        img.style.opacity = '0.3';
-
-        // Try to place image without overlap (max 100 attempts)
-        for (let attempts = 0; attempts < 100; attempts++) {
-            img.style.top = `${Math.random() * 100}%`;
-            img.style.left = `${Math.random() * 100}%`;
-            // img.style.transform = `rotate(${Math.random() * 360}deg)`;
-
-            // Wait for image to load to get accurate dimensions
-            img.onload = () => {
-                const rect = img.getBoundingClientRect();
-                
-                // If no overlap, add the image
-                if (!isOverlapping(rect)) {
-                    placedImages.push(img);
-                    backgroundContainer.appendChild(img);
-                    return;
-                }
-            };
+    // Create grid positions
+    for (let row = 0; row < gridRows; row++) {
+        for (let col = 0; col < gridColumns; col++) {
+            gridPositions.push({
+                top: `${(row / gridRows) * 100}%`,
+                left: `${(col / gridColumns) * 100}%`
+            });
         }
     }
 
-    // Place images
-    backgroundImages.forEach(placeImage);
+    // Randomly select grid positions
+    const selectedPositions = gridPositions.sort(() => 0.5 - Math.random()).slice(0, backgroundImages.length);
+
+    // Place images in grid positions
+    backgroundImages.forEach((imageUrl, index) => {
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        img.style.position = 'absolute';
+        img.style.width = `${Math.random() * 200 + 100}px`; // Random width between 100-300px
+        img.style.opacity = '0.3';
+        
+        // Use predetermined grid position
+        const position = selectedPositions[index];
+        img.style.top = position.top;
+        img.style.left = position.left;
+        
+        // Random rotation
+        img.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+        backgroundContainer.appendChild(img);
+    });
 
     // Add to body
     document.body.appendChild(backgroundContainer);
