@@ -171,14 +171,60 @@ header nav a:hover {
 
 .events-list {
     display: flex;
-    justify-content: center;
     gap: 30px;
+    overflow-x: auto;
+    padding: 20px 10px;
+    max-width: 100%;
+    white-space: nowrap;
+    scroll-padding: 20px;
+    scroll-snap-type: x mandatory;
 }
 
 .event {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 5px;
+    flex: 0 0 calc(100% - 50px);
+    max-width: 300px;
+    min-width: 250px;
+    white-space: normal;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: scale(1.02);
+}
+
+.events-list::-webkit-scrollbar {
+    height: 8px;
+}
+
+.events-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.events-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.events-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    .events-list {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px 15px;
+    }
+
+    .event {
+        flex: 0 0 calc(100% - 30px);
+        max-width: 90vw;
+    }
 }
 
 .contact-info {
@@ -249,4 +295,18 @@ footer {
     padding: 10px 20px;
     z-index: 10;
     font-weight: 300;
+}
+
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 12px 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
 }
