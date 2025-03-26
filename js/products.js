@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	const urlParams = new URLSearchParams(window.location.search);
 	if (urlParams.has('product')) {
 		return;
-	}
-
+    }
+    
 	let mainContent = document.getElementById('main');
 
 	fetch('/JSON/products.json')
@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 			myJson.categories.forEach(function (category) {
 				productHTML += `
-                    <article class="category-section">
-                        <h2>${category.name}</h2>
-                        <section class="category-products">
+                <h2 class="product-title">${category.name}</h2>
+                    <ul class="category-section">
+                    <li class="category-products">
                 `;
 
 				category.products.forEach(function (product) {
@@ -40,14 +40,22 @@ document.addEventListener('DOMContentLoaded', function (event) {
 				});
 
 				productHTML += `
-                        </section>
-                    </article>
+                        </li>
+                    </ul>
                 `;
 			});
 
 			mainContent.innerHTML = productHTML;
+
+			//Åben og luk titler
+			document.querySelectorAll('.product-title').forEach((title) => {
+				const ul = title.nextElementSibling;
+				title.addEventListener('click', () => {
+					ul.classList.toggle('show');
+				});
+			});
 		})
 		.catch(function (error) {
 			console.error('Error loading the JSON file:', error);
-		});
+        });
 });

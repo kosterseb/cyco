@@ -47,8 +47,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span>Pris: ${(product.price * 1.25).toLocaleString()} kr</span>
                 
                 <input id="qty-${product.id}" type="number" value="1" min="1">
-                <button onclick="addCart('${product.id}', parseInt(document.getElementById('qty-${product.id}').value, 10) || 1)">Add To Cart</button>
+                <button onclick="addCart('${
+									product.id
+								}', parseInt(document.getElementById('qty-${product.id}').value, 10) || 1)">Add To Cart</button>
            </div>
         `;
-	}
+    }
+    
 });
+
+
