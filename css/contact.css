@@ -263,6 +263,10 @@ footer {
     font-weight: 300;
 }
 
+.logo h1 a {
+    color: #000;
+}
+
 .logo2 {
     visibility: hidden;
     padding: 0;
