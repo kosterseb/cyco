@@ -9,6 +9,10 @@ html {
 	font-family: Poppins, sans-serif;
 }
 
+ul {
+	list-style: none;
+}
+
 /* Store frontpage */
 
 a {
@@ -20,6 +24,15 @@ a {
 	display: flex;
 	flex-direction: column;
 	margin: 5px;
+}
+
+#main h2 {
+	text-align: center;
+	font-size: 28px;
+}
+
+.product-title {
+	cursor: pointer;
 }
 
 .category-products {
@@ -38,25 +51,45 @@ a {
 
 .products {
 	border: 5px solid black;
-	width: 50%;
+	width: 65%;
 	margin: 10px 0;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	position: relative;
 }
 
 .products h2 {
 	font-size: 22px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+}
+.products span {
+	font-weight: 300;
+	position: absolute;
+	bottom: 5px;
+	left: 75px;
 }
 
 .category-section {
 	text-align: center;
 }
 
-section {
+li {
 	margin-bottom: 20px;
+}
+
+/* Åben/skjul */
+.category-section {
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 0.5s ease-out, opacity 0.3s ease;
+}
+
+.category-section.show {
+	max-height: 1000px;
+	opacity: 1;
 }
 
 /* Product page */
@@ -104,21 +137,24 @@ section {
 		width: 80%;
 	}
 
-    .product{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .product img {
-        width: 43rem;
-        margin: 20px 0;
-    }
+	.products span {
+		left: 120px;
+	}
 
-    .product input {
-        width: 3rem;
-        margin-left: 20rem;
-    }
-   
-    
+	.product {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.product img {
+		width: 43rem;
+		margin: 20px 0;
+	}
+
+	.product input {
+		width: 3rem;
+		margin-left: 20rem;
+	}
 }
