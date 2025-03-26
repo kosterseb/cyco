@@ -77,3 +77,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
     typeWriter();
 });
+
+// Function to create and place random background images
+function placeRandomBackgroundImages() {
+    // Array of placeholder image URLs (you can replace these with your actual PNG paths)
+    const backgroundImages = [
+        'https://lh3.googleusercontent.com/d/1Rlmq8-Qd9ES7x2MyrxqfLbimy37hgGTY',
+        'https://lh3.googleusercontent.com/d/1y-1Wtu7MwPtqAc87i6bPMN1pLOH0dxiW',
+        'https://lh3.googleusercontent.com/d/1__WGilIjhID5xj6Musq6CJSlMWjby4GD',
+        'https://lh3.googleusercontent.com/d/1efoNOz5Hjo_wjDHjTHR8wx17xh94Wh7L',
+        'https://lh3.googleusercontent.com/d/1H9O8AFUcvn0kn1RTbnwcnzGyTbXZo_Po',
+        'https://lh3.googleusercontent.com/d/1Fusgxp4rH7yMipqDx2vo2EqByQQPZj2D',
+        'https://lh3.googleusercontent.com/d/1UECMEEENAgJraWVo_HbcNOeG7kSk9N2z',
+        'https://lh3.googleusercontent.com/d/1kjNH6rrQWjOsUMALRIOelGuMfoj1E7Xh',
+        'https://lh3.googleusercontent.com/d/1dVLVsjoSSb7jNyFkuozpnOfYLWncrU4M',
+        
+    ];
+
+    // Create a container for background images
+    const backgroundContainer = document.createElement('div');
+    backgroundContainer.id = 'background-images';
+    backgroundContainer.style.position = 'fixed';
+    backgroundContainer.style.top = '0';
+    backgroundContainer.style.left = '0';
+    backgroundContainer.style.width = '100%';
+    backgroundContainer.style.height = '100%';
+    backgroundContainer.style.pointerEvents = 'none';
+    backgroundContainer.style.zIndex = '-2';
+    backgroundContainer.style.overflow = 'hidden';
+
+    // Create a grid to place images without overlap
+    const gridColumns = 4;
+    const gridRows = 3;
+    const gridPositions = [];
+
+    // Shuffle images to randomize placement
+    for (let i = backgroundImages.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [backgroundImages[i], backgroundImages[j]] = [backgroundImages[j], backgroundImages[i]];
+    }
+
+    // Create grid positions
+    for (let row = 0; row < gridRows; row++) {
+        for (let col = 0; col < gridColumns; col++) {
+            gridPositions.push({
+                top: `${(row / gridRows) * 100}%`,
+                left: `${(col / gridColumns) * 100}%`
+            });
+        }
+    }
+
+    // Randomly select grid positions
+    const selectedPositions = gridPositions.sort(() => 0.5 - Math.random()).slice(0, backgroundImages.length);
+
+    // Place images in grid positions
+    backgroundImages.forEach((imageUrl, index) => {
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        img.style.position = 'absolute';
+        img.style.width = `${Math.random() * 200 + 100}px`; // Random width between 100-300px
+        img.style.opacity = '0.3';
+        
+        // Use predetermined grid position
+        const position = selectedPositions[index];
+        img.style.top = position.top;
+        img.style.left = position.left;
+        
+        // Random rotation
+        img.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+        backgroundContainer.appendChild(img);
+    });
+
+    // Add to body
+    document.body.appendChild(backgroundContainer);
+}
+
+// Run when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', placeRandomBackgroundImages);

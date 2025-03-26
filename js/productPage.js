@@ -40,15 +40,16 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Function to generate HTML for a product
 	function generateProduct(product) {
 		return `
-            
+            <div class="product-page">
                 <h2>${product.title}</h2>
                 <img src="${product.image}" alt="${product.title}">
                 <p>${product.description}</p>
-                <p>Pris: ${(product.price * 1.25).toLocaleString()} kr</p>
+                <span>Pris: ${(product.price * 1.25).toLocaleString()} kr</span>
                 
                 <input type="number" value="1" min="1">
                 <button onclick="addCart('${product.id}')">Add to cart</button> 
-           
+           </div>
         `;
-	}
+    }
+    
 });
