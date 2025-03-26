@@ -1,4 +1,3 @@
-//
 const CartModule = (function() {
     let products = null;
     let listCart = [];
@@ -415,3 +414,4 @@ const CartModule = (function() {
 // window.addDataToHTML = CartModule.addDataToHTML;
 // window.checkoutPaymentHTML = CartModule.checkoutPaymentHTML;
 // window.initializeCart = CartModule.initializeCart;
+
