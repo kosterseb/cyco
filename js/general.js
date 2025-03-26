@@ -148,10 +148,37 @@ function placeRandomBackgroundImages() {
 
         backgroundContainer.appendChild(img);
     });
-
+    
     // Add to body
     document.body.appendChild(backgroundContainer);
 }
 
+function setupMarquees() {
+    const marquees = document.querySelectorAll('.marquee');
+    
+    marquees.forEach(marquee => {
+        const originalContent = marquee.querySelector('.marquee-text');
+        const contentText = originalContent.textContent.trim();
+        
+        // Create a container for the marquee content
+        const marqueeContent = document.createElement('div');
+        marqueeContent.className = 'marquee-content';
+        
+        // Create two identical text spans
+        for (let i = 0; i < 2; i++) {
+            const textSpan = document.createElement('div');
+            textSpan.className = 'marquee-text';
+            textSpan.textContent = contentText;
+            marqueeContent.appendChild(textSpan);
+        }
+        
+        // Replace original content with new marquee content
+        marquee.innerHTML = '';
+        marquee.appendChild(marqueeContent);
+    });
+}
+
+
 // Run when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', setupMarquees);
 document.addEventListener('DOMContentLoaded', placeRandomBackgroundImages);

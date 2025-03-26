@@ -131,20 +131,28 @@ section a {
     overflow: hidden;
     white-space: nowrap;
     padding: 10px 0;
+    width: 100%;
+    position: relative;
 }
 
 .marquee-content {
     display: inline-block;
+    white-space: nowrap;
     animation: marquee 20s linear infinite;
+    display: flex;
+}
+
+.marquee-text {
+    padding-right: 5px;
+    white-space: nowrap;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
-
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
@@ -255,6 +263,13 @@ footer {
     font-weight: 300;
 }
 
+.logo2 {
+    visibility: hidden;
+    padding: 0;
+    position: absolute;
+
+}
+
 .about-content {
     display: flex;
     align-items: center;
@@ -341,5 +356,22 @@ footer {
     .location-details {
         flex-direction: column;
         text-align: center;
+    }
+    .logo2 h1 {
+        position: absolute;
+        top: -33px;
+        left: 10px;
+        transform: translateX(-50%);
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        padding: 10px;
+        width: 140px;
+        z-index: 10;
+        font-size: 30px;
+        font-weight: 300;
+        visibility: visible;
+    }
+    .logo h1 {
+        visibility: hidden;
     }
 }
