@@ -53,8 +53,6 @@ const CartModule = (function() {
       checkoutContainer.appendChild(checkoutPaymentDiv);
     }
   
-
-  
     function addCart(productId, quantity = 1) {
       if (!products) return;
   
@@ -81,6 +79,14 @@ const CartModule = (function() {
       }
       addCartToHTML();
       saveCart();
+      openCart();
+    }
+
+    function openCart() {
+        const checkoutContainer = document.querySelector('.checkout-container');
+        if (checkoutContainer && !checkoutContainer.classList.contains('open')) {
+            checkoutContainer.classList.add('open');
+        }
     }
   
     function addCartToHTML() {
