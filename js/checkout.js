@@ -42,9 +42,9 @@ const CartModule = (function() {
           <section class="checkout-paymentmethods">
             <span>Payment methods</span>
             <figure class="payment-methods">
-              <img src="https://drive.google.com/thumbnail?id=16ECylO99UtGs08pIByOLIV0Bq8Y_cJAc" alt="">
-              <img src="https://drive.google.com/thumbnail?id=1AYRZDgQsyCyIfiubR1eDsOKXY8Xvu9-J" alt="">
-              <img src="https://drive.google.com/thumbnail?id=1AiyPYyGwry8PS2LFqzYp82NAL25eIzmI" alt="">
+              <img src="https://lh3.googleusercontent.com/d/16ECylO99UtGs08pIByOLIV0Bq8Y_cJAc" alt="Visa Card">
+              <img src="https://lh3.googleusercontent.com/d/1AYRZDgQsyCyIfiubR1eDsOKXY8Xvu9-J" alt="Mobilepay">
+              <img src="https://lh3.googleusercontent.com/d/1AiyPYyGwry8PS2LFqzYp82NAL25eIzmI" alt="Mastercard">
             </figure>
           </section>
         </div>
@@ -55,7 +55,7 @@ const CartModule = (function() {
   
 
   
-    function addCart(productId) {
+    function addCart(productId, quantity = 1) {
       if (!products) return;
   
       // Find the product in the nested structure
@@ -72,11 +72,11 @@ const CartModule = (function() {
       // Check if product already exists in cart
       const existingProduct = listCart.find(item => item.id === productId);
       if (existingProduct) {
-        existingProduct.quantity++;
+        existingProduct.quantity += quantity;
       } else {
         listCart.push({
           ...productToAdd,
-          quantity: 1
+          quantity: quantity
         });
       }
       addCartToHTML();
