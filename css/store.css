@@ -47,6 +47,9 @@ a {
 	width: 150px;
 	margin: 10px 0;
 	margin-bottom: 50px;
+	width: 80%;
+	height: 150px;
+	object-fit: cover;
 }
 
 .products {
@@ -88,7 +91,7 @@ li {
 }
 
 .category-section.show {
-	max-height: 1000px;
+	max-height: 1500px;
 	opacity: 1;
 }
 

@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	const urlParams = new URLSearchParams(window.location.search);
 	if (urlParams.has('product')) {
 		return;
-    }
-    
+	}
+
 	let mainContent = document.getElementById('main');
 
 	fetch('/JSON/products.json')
@@ -50,12 +50,21 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			//Åben og luk titler
 			document.querySelectorAll('.product-title').forEach((title) => {
 				const ul = title.nextElementSibling;
+
 				title.addEventListener('click', () => {
+					document.querySelectorAll('.product-title').forEach((t) => {
+						t.style.textDecoration = 'none';
+					});
+
 					ul.classList.toggle('show');
+
+					if (ul.classList.contains('show')) {
+						title.style.textDecoration = 'underline';
+					}
 				});
 			});
 		})
 		.catch(function (error) {
 			console.error('Error loading the JSON file:', error);
-        });
+		});
 });
