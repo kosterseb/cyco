@@ -1,19 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CY | CO - Contact</title>
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://drive.google.com/thumbnail?id=1JnB1PmeI6yccoF-ipiGxzOUAUlrvCiWf" type="image/x-icon">
 </head>
 <body>
-  <header>
-  </header>
-  <main>
-  </main>
-  <footer>
-  </footer>
-  <script src="scripts.js"></script>
+    <header>
+        <nav>
+            <a href="index.html">HOME |</a>
+            <a href=""> SHOP |</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero contact-hero">
+            <div class="logo">
+                <h1>CY | CO</h1>
+            </div>
+            
+            <video autoplay muted loop
+                src="https://videos.pexels.com/video-files/5465259/5465259-uhd_2560_1440_25fps.mp4"></video>
+            <div class="hero-text">
+                <h2>Get in Touch</h2>
+            </div>
+        </section>
+
+        <div class="marquee">
+            <div class="marquee-content">
+                CONNECT • COLLABORATE • COMMUNITY • CYCLING
+            </div>
+        </div>
+
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2>About CY | CO</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>CY | CO is more than just a café – we're a community hub where cycling enthusiasts and coffee lovers unite. Founded in 2023, our mission is to create a space that celebrates the intersection of urban cycling culture and exceptional coffee.</p>
+                        
+                        <p>Our team is passionate about sustainable urban mobility, artisan coffee, and building meaningful connections. We believe in creating experiences that go beyond a simple cup of coffee or a bike ride – we're about building a community that inspires and supports each other.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.pexels.com/photos/5465176/pexels-photo-5465176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="CY|CO Team">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee">
+            <div class="marquee-content">
+                INSPIRE • CREATE • CONNECT • ENJOY
+            </div>
+        </div>
+
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2>Contact Us</h2>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button 
+                        type="submit"><a href="contactsuccess.html">Send Message</a></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-info section">
+            <div class="section-content">
+                <h2>Our Location</h2>
+                <div class="location-details">
+                    <div class="address">
+                        <h3>CY | CO</h3>
+                        <p>Nørrebrogade 100</p>
+                        <p>2200 Copenhagen N</p>
+                        <p>Denmark</p>
+                    </div>
+                    <div class="contact-details">
+                        <p>Email: hello@cyco.dk</p>
+                        <p>Phone: +45 12 34 56 78</p>
+                        <p>Hours: Mon-Fri 8am-8pm</p>
+                        <p>Sat-Sun 9am-6pm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="marquee">
+      <div class="marquee-content">
+          BICYCLE • CAFÉ • COMMUNITY • CULTURE • CYCLING • COFFEE
+      </div>
+  </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
 </body>
 </html>
