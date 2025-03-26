@@ -10,12 +10,18 @@
     --accent-color: #888;
 }
 
+#background-images img {
+    position: absolute;
+    z-index: -2;
+    object-fit: cover;
+    filter: grayscale(50%); /* Optional: add a grayscale effect */
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-
 }
 
 header {
@@ -268,6 +274,7 @@ footer {
         position: relative;
         margin-bottom: 20px;
     }
+
 }
 
 .hero {
