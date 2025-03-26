@@ -208,6 +208,7 @@ const CartModule = (function() {
     }
   }
   
+  
 
   // // DOM Elementer
 // const shopIcon = document.querySelector('.shop-icon');
