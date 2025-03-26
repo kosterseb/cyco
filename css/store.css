@@ -18,4 +18,6 @@
 }
 
 .product img {
+    width: 150px;
+    margin: 10px 0;
 }
