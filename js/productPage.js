@@ -44,12 +44,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h2>${product.title}</h2>
                 <img src="${product.image}" alt="${product.title}">
                 <p>${product.description}</p>
-                <span>Pris: ${(product.price * 1.25).toLocaleString()} kr</span>
+                <span>Price: ${(product.price * 1.25).toLocaleString()} DKK</span>
                 
                 <input id="qty-${product.id}" type="number" value="1" min="1">
                 <button onclick="addCart('${
 									product.id
-								}', parseInt(document.getElementById('qty-${product.id}').value, 10) || 1); openCard();">Add To Cart</button>
+								}', parseInt(document.getElementById('qty-${
+			product.id
+		}').value, 10) || 1); openCard();">Add to cart</button>
+                <a href="storepage.html"><button id="backButton">Back</button></a>
            </div>
         `;
 	}

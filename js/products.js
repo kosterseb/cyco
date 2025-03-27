@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                                 <h2>${product.title}</h2>
                                 <span>${(
 																	product.price * 1.25
-																).toLocaleString()} kr</span>
+																).toLocaleString()} DKK</span>
                             </a>
                         </div>
                     `;
