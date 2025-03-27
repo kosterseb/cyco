@@ -25,6 +25,10 @@ ul {
     padding: 0;
 }
 
+.checkout-button-text {
+    color: white;
+}
+
 /* Mobile checkout (Slides from buttom) */
 
 .checkout-container {
