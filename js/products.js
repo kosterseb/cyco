@@ -1,13 +1,23 @@
-let mainContent = document.getElementById('main');
-
 document.addEventListener('DOMContentLoaded', function (event) {
+	const mainContent = document.getElementById('main');
+
 	// Check if the URL has a 'product' query parameter; if yes, skip rendering the list
 	const urlParams = new URLSearchParams(window.location.search);
 	if (urlParams.has('product')) {
 		return;
 	}
 
-	let mainContent = document.getElementById('main');
+	// Set initial marquee content immediately
+	mainContent.innerHTML = `
+    <div class="marquee">
+        <div class="marquee-content"
+            <div class="marquee-text">
+            STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE •STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE •
+            STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE •STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE • CATEGORIES • STORE •
+            </div>
+        </div>
+    </div>    
+    `;
 
 	fetch('/JSON/products.json')
 		.then(function (response) {
@@ -19,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			myJson.categories.forEach(function (category) {
 				productHTML += `
                 <h2 class="product-title">${category.name}</h2>
-                    <ul class="category-section">
+                <ul class="category-section">
                     <li class="category-products">
                 `;
 
@@ -40,14 +50,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
 				});
 
 				productHTML += `
-                        </li>
-                    </ul>
+                    </li>
+                </ul>
                 `;
 			});
 
-			mainContent.innerHTML = productHTML;
+			// Append product content to the existing marquee
+			mainContent.innerHTML += productHTML;
 
-			//Åben og luk titler
+			// Open and close titles
 			document.querySelectorAll('.product-title').forEach((title) => {
 				const ul = title.nextElementSibling;
 

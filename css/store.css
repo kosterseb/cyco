@@ -133,26 +133,87 @@ header nav a:hover {
 	padding-left: 7.4px;
 }
 
+/*intro section*/
+#introSection {
+	display: block;
+	min-height: 100vh;
+	position: relative;
+}
+
+video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.hero-text {
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	color: var(--secondary-color);
+	font-size: 2rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* Store frontpage */
 
 a {
 	text-decoration: none;
-	color: black;
+	color: var(--primary-color);
 }
 
 #main {
-	display: flex;
-	flex-direction: column;
+	display: block;
+	min-height: 100vh;
 	margin: 5px;
 	position: absolute;
-	top: 10%;
+	top: 110%;
 	left: 5%;
 	right: 5%;
+}
+
+.marquee {
+	background-color: blue;
+	color: var(--secondary-color);
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 10px 0;
+	width: 100%;
+	position: relative;
+    margin-bottom: 3rem;
+}
+
+.marquee-content {
+	display: inline-block;
+	white-space: nowrap;
+	animation: marquee 20s linear alternate infinite;
+	display: flex;
+}
+
+.marquee-text {
+	padding-right: 5px;
+	white-space: nowrap;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
 }
 
 #main h2 {
 	text-align: center;
 	font-size: 28px;
+	color: var(--primary-color);
 }
 
 .product-title {
@@ -177,7 +238,7 @@ a {
 }
 
 .products {
-	border: 5px solid black;
+	border: 5px solid var(--primary-color);
 	width: 100%;
 	margin: 10px 0;
 	padding: 10px;
@@ -248,15 +309,15 @@ li {
 }
 
 .product button {
-	color: #fff;
-	background-color: black;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
 	width: 100px;
 	height: 30px;
 }
 
 #backButton {
-    color: #fff;
-	background-color: black;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
 	width: 100px;
 	height: 30px;
 }
@@ -298,14 +359,10 @@ li {
 		padding: 20px;
 	}
 
-    /* .product button {
-    margin-right: 2rem;
-} */
-
 	/*header og nav*/
 
 	header {
-		height: 50px;
+		height: 80px;
 	}
 	header {
 		padding: 35px;
