@@ -48,7 +48,9 @@ const CartModule = (function() {
             </figure>
           </section>
         </div>
-        <button class="checkout-button">Checkout</button>
+        <button class="checkout-button">
+            <a href="checkout.html" class="checkout-button-text">Checkout</a>
+        </button>
       `;
       checkoutContainer.appendChild(checkoutPaymentDiv);
     }

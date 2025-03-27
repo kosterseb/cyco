@@ -5,21 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <link rel="stylesheet" type="text/css" href="/css/checkout.css">
+  <link rel="stylesheet" href="/css/checkoutpage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Checkout</title>
+  <title>CY | CO - Checkout</title>
 </head>
 <body>
-  <!-- <header>
-    <div class="shop-icon">
-      <i class="icon fa-solid fa-bicycle"></i>
-      <div class="totalProducts" id="totalProducts">0</div>
-    </div>
-  </header> -->
+  <header>
+  </header>
   <main>
+    <article class="info">
+      <form action="" class="checkout-form">
+        <!-- Delivery form -->
+        <section class="delivery">
+          <h2>Delivery</h2>
+          <div class="country">
+            <label for="country">
+              <span>Country/Region</span>
+            </label>
+            <select name="coutntryCode" id="country" required></select>
+          </div>
+          <div class="form-name">
+            <input type="text" name="firstName" id="" placeholder="First Name" required>
+            <input type="text" name="lastName" id="" placeholder="Last Name" required>
+          </div>
+          <input type="text" name="company" id="" placeholder="Company (optional)">
+          <input type="text" name="adress" id="" placeholder="Address" required>
+          <input type="text" name="aparment" id="" placeholder="Aparment, suite, etc. (optional)">
+          <div class="city">
+            <input type="text" name="postalCode" id="" placeholder="Postal Code" required>
+            <input type="text" name="city" id="" placeholder="City" required>
+          </div>
+          <input type="text" name="phone" id="" placeholder="Phone">
+        </section>
+
+        <!-- Payment form -->
+        <section class="payment">
+          <h2>Payment</h2>
+          <p>All transactions are secure and encrypted.</p>
+          <div class="payment-method-card">
+            <input type="radio" name="payment" id="card" class="radioCard" checked>
+              <label for="card">Credit Card</label>
+              <figure class="card-payment-methods">
+                <img src="https://lh3.googleusercontent.com/d/16ECylO99UtGs08pIByOLIV0Bq8Y_cJAc" alt="Visa Card">
+                <img src="https://lh3.googleusercontent.com/d/1AYRZDgQsyCyIfiubR1eDsOKXY8Xvu9-J" alt="Mobilepay">
+                <img src="https://lh3.googleusercontent.com/d/1AiyPYyGwry8PS2LFqzYp82NAL25eIzmI" alt="Mastercard">
+              </figure>
+          </div>
+          <div class="payment-form" id="creditCardForm">
+            <div class="cardNumber">
+              <input type="text" name="cardNumber" id="" placeholder="Card Number" class="input-field" required>
+            </div>
+            <div class="security">
+              <input type="text" name="cardExpiration" id="" placeholder="Expiration date (MM/YY)" class="input-field" required>
+              <input type="text" name="cardCVC" id="" placeholder="Security code" class="input-field" required>
+            </div>
+            <input type="text" name="cardName" id="" placeholder="Name on Card" class="input-field" required>
+            <div class="checkbox-row">
+              <input type="checkbox" name="billingAddress" id="billingAddress" checked />
+              <label for="billingAddress">Use shipping address as billing address</label>
+            </div>
+          </div>
+          <div class="payment-other">
+            <input type="radio" name="payment" id="mobilePay" class="radioOther" />
+            <label for="mobilePay">Other Payments (MobilePay)</label>
+          </div>
+
+          <div id="mobilePayMenu" class="hidden mobilePayMenu">
+            <p>Select a payment method:</p>
+            <span class="mobile-pay">
+              <p>MobilePay</p>
+              <img src="https://lh3.googleusercontent.com/d/1AYRZDgQsyCyIfiubR1eDsOKXY8Xvu9-J" alt="Mobilepay">
+            </span>
+          </div>
+        </section>
+      </form>
+
+      <section class="orderSummary">
+        <div class="summary-header">
+          <h2>Order Summary</h2>
+          <button class="toggle-button" id="toggleButton" type="button">
+            <span id="toggleText">Show</span>
+            <i id="toggleIcon" class="icon fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="item-list" id="itemList"></div>
+
+        <div class="discount">
+          <input type="text" placeholder="Discount Code" id="discountCode">
+          <button class="apply" id="discountApply">Apply</button>
+        </div>
+
+        <div class="summary-total">
+          <p class="subtotal">
+            <span></span>
+            <span></span>
+          </p>
+          <p class="total">
+            <span>Total</span>
+            <span></span>
+          </p>
+        </div>
+        <button class="pay-now">Pay now</button>
+      </section>
+
+    </article>
+  </main>
+  <div id="checkoutContainer"></div>
+
+
   <script src="/js/checkout.js"></script>
+  <script src="/js/checkoutpage.js"></script>
 </body>
 </html>

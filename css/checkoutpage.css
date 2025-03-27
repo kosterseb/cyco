@@ -1,0 +1,422 @@
+/* Checkout page */
+.delivery {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 0.75rem;
+}
+
+.payment {
+    width: 350px;
+    margin: 0 1rem;
+    color: #333;
+}
+
+.orderSummary {
+    margin: 1rem;
+}
+
+.payment h2 {
+    margin-bottom: 0.5rem;
+}
+
+.payment p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-method-card {
+    border: 1px solid black;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #F5F5F5;
+}
+
+.payment-method-card label {
+    font-weight: 600;
+}
+
+.payment-form {
+    border-top: none;
+    padding: 1rem;
+    background-color: #F5F5F5;
+}
+
+.cardNumber {
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid black;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.radioCard {
+    margin-right: 0.5rem;
+}
+
+input {
+    border: 1px solid #D2D2D2;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+select {
+    border: 1px solid #D2D2D2;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+label {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.form-name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.city {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.security {
+    display: flex;
+    gap: 0.15rem;
+    flex-direction: column;
+}
+
+.card-payment-methods {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.card-payment-methods img {
+    width: auto;
+    height: 1.25rem;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.payment-other {
+    border: 1px solid #ccc;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.payment-other:has(input:checked) {
+    border-radius: 0;
+    border: 1px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+.mobilePayMenu {
+    background-color: #F5F5F5;
+    border: 1px solid #ccc;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.mobilePayMenu p {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.mobile-pay {
+    width: 90%;
+    margin-left: 1rem;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mobile-pay img {
+    margin-left: 2rem;
+    width: 10rem;
+    object-fit: cover;
+}
+
+/* Summary */
+.toggle-button {
+    background: none;
+    border: none;
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.icon {
+    margin-left: 0.3rem;
+    transition: transform 0.3s ease;
+}
+  
+.icon.open {
+    transform: rotate(180deg);
+}
+
+.hide {
+    display: none;
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.discount {
+    display: flex;
+    gap: 0.5rem;
+    margin: 2rem auto;
+}
+
+.discount input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.discount button {
+    background-color: #FAFAFA;
+    color: #8A8A8A;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.summary-total p {
+    margin: 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-total .subtotal {
+    color: #666;
+}
+.summary-total .total {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.pay-now {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 2rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Items */
+.item-page .productsTotal {
+    position: absolute;
+    background-color: #B1B1B1;
+    color: #ffffff;
+    left: 55px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    text-align: center;
+    transform: translate(50%, -115%);
+    z-index: 2;
+}
+
+.item-image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.item-list {
+    margin-bottom: 1rem;
+}
+
+.item-page {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.item-name {
+    margin-left: 1rem;
+}
+
+.item-price {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin: 0 5rem;
+    }
+
+    .delivery {
+        margin: auto;
+    }
+
+    .orderSummary {
+        margin: auto;
+    }
+
+    .payment {
+        width: 100%;
+        margin: auto;
+    }
+
+    .form-name {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .form-name input {
+        flex: 1;
+    }
+
+    .city {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .mobile-pay {
+        margin-left: 2rem;
+        width: 50%;
+    }
+
+    .city input {
+        flex: 1;
+    }
+
+    .security {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: row;
+    }
+
+    .item-page .productsTotal {
+        left: 115px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        margin: 0;
+    }
+    
+    .info {
+        display: flex;
+    }
+
+    .payment {
+        width: 100%;
+        margin: auto;
+    }
+
+    .checkout-form {
+        width: 55%;
+        padding: 2.3rem;
+    }
+
+    .orderSummary {
+        background-color: black;
+        color: white;
+        width: 45%;
+        margin: 0;
+        padding: 2.3rem;
+    }
+
+    .discount button {
+        background-color: #0A0A0A;
+        color: #8B8B8B;
+    }
+
+    .pay-now {
+        background-color: #0A0A0A;
+        color: white;
+    }
+
+    .summary-header {
+        display: none;
+    }
+
+    .item-page .productsTotal {
+        position: relative;
+        left: -23px;
+    }
+
+    .mobile-pay {
+        width: 60%;
+    }
+
+    .item-name {
+        margin: 0;
+    }
+
+    .security {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: row;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .checkout-form {
+        margin-left: 5rem;
+    }
+
+    .mobile-pay img{
+        margin-left: 6rem;
+    }
+}
