@@ -2,155 +2,155 @@
 	"categories": [
 		{
 			"id": "cat-001",
-			"name": "Cykler",
+			"name": "Bicycles",
 			"products": [
 				{
 					"id": "cyk-001",
 					"title": "City bike",
 					"image": "https://lh3.googleusercontent.com/d/19GjGJK2f3hSkm8COXswbHLZ74PMM0MGS",
-					"description": "En højkvalitets cykel designet til bykørsel med komfort og holdbarhed i fokus.",
+					"description": "A high-quality bicycle designed for city riding, with a focus on comfort and durability.",
 					"price": 5499
 				},
 				{
 					"id": "cyk-002",
-					"title": "Racer cykel",
+					"title": "Racer bike",
 					"image": "https://lh3.googleusercontent.com/d/1Zw20RfrP4Ta-xEAdjOJtc-L-lzWtZwpB",
-					"description": "Perfekt til længere distancer med let løbende hjul og ergonomisk siddestilling.",
+					"description": "Perfect for longer distances with smooth-rolling wheels and an ergonomic seating position.",
 					"price": 7299
 				},
 				{
 					"id": "cyk-003",
 					"title": "Mountainbike",
 					"image": "https://lh3.googleusercontent.com/d/1IVyT4LIfcf33LCpO2cnvUBuidqRpqeIE",
-					"description": "Robust mountainbike til eventyr i skoven og på ujævne stier.",
+					"description": "Robust mountain bike for adventures in the forest and on rough trails.",
 					"price": 8999
 				}
 			]
 		},
 		{
 			"id": "cat-002",
-			"name": "Cykel udstyr",
+			"name": "Bicycle gear",
 			"products": [
 				{
 					"id": "cud-001",
-					"title": "Flaskeholdere",
+					"title": "Bottle holder",
 					"image": "https://lh3.googleusercontent.com/d/1VAlMzvkWKFM_aI0krTiwr4njoXUQVMts",
-					"description": "Letvægts flaskeholder i aluminium, nem at montere på alle cykelrammer.",
+					"description": "Lightweight aluminum bottle holder, easy to mount on all bike frames.",
 					"price": 149
 				},
 				{
 					"id": "cud-002",
-					"title": "Tasker og opbevaring",
+					"title": "Bags and storage",
 					"image": "https://lh3.googleusercontent.com/d/1zNVOo20FthA1fXAH4Q_iTln7IsdkH1-T",
-					"description": "Vandtæt cykeltaske med rigelig plads til personlige ejendele og værktøj.",
+					"description": "Waterproof bike bag with ample space for personal belongings and tools.",
 					"price": 399
 				},
 				{
 					"id": "cud-003",
-					"title": "Hjelme",
+					"title": "Helmet",
 					"image": "https://lh3.googleusercontent.com/d/1Bt7xJBrJh2EhnOGuQSs5fLa4hgSFkYtU",
-					"description": "Sikker og behagelig cykelhjelm med justerbar pasform og god ventilation.",
+					"description": "Safe and comfortable bike helmet with adjustable fit and good ventilation.",
 					"price": 599
 				}
 			]
 		},
 		{
 			"id": "cat-003",
-			"name": "Cykel dele",
+			"name": "Bicycle parts",
 			"products": [
 				{
 					"id": "cdl-001",
-					"title": "Dæk",
+					"title": "Tires",
 					"image": "https://lh3.googleusercontent.com/d/1MReaXSUjnezKVWmwFV0LiTPj1pR7XERP",
-					"description": "Punkteringssikre dæk med god vejgreb i alle vejrforhold.",
+					"description": "Puncture-resistant tires with good grip in all weather conditions.",
 					"price": 349
 				},
 				{
 					"id": "cdl-002",
-					"title": "Sadler",
+					"title": "Saddle",
 					"image": "https://lh3.googleusercontent.com/d/1_p230Q9_wRzKLZFHxVMM8FqSFWUluWkZ",
-					"description": "Ergonomisk designet sadel for maksimal komfort på længere ture.",
+					"description": "Ergonomically designed saddle for maximum comfort on longer rides.",
 					"price": 499
 				},
 				{
 					"id": "cdl-003",
-					"title": "Styr",
+					"title": "Handlebars",
 					"image": "https://lh3.googleusercontent.com/d/1i8fPKlUXL97mWt7FjqoX-JOvjf1utLP_",
-					"description": "Letvægts styr i aluminium med komfortabel grebsoverflade.",
+					"description": "Lightweight aluminum handlebars with a comfortable grip surface.",
 					"price": 429
 				}
 			]
 		},
 		{
 			"id": "cat-004",
-			"name": "Kaffe",
+			"name": "Coffee",
 			"products": [
 				{
 					"id": "kaf-001",
-					"title": "Mørk ristet",
+					"title": "Dark roast",
 					"image": "https://lh3.googleusercontent.com/d/1Vj54ojNd3pMXprdBWJmiiknRZaltw2A-",
-					"description": "Intens og fyldig kaffe med noter af chokolade og karamel, perfekt til espresso.",
+					"description": "Intense and rich coffee with notes of chocolate and caramel, perfect for espresso.",
 					"price": 89
 				},
 				{
 					"id": "kaf-002",
-					"title": "Lyst ristet",
+					"title": "Light roast",
 					"image": "https://lh3.googleusercontent.com/d/1BmXMbreAzutQVhPNdyE75j_ujIm18HkD",
-					"description": "Frisk og frugtig kaffe med lysere ristning, fremhæver kaffens naturlige sødme.",
+					"description": "Fresh and fruity coffee with a lighter roast, highlighting the coffee's natural sweetness.",
 					"price": 89
 				}
 			]
 		},
 		{
 			"id": "cat-005",
-			"name": "Kaffe maskiner",
+			"name": "Coffee machines",
 			"products": [
 				{
 					"id": "kma-001",
-					"title": "Espresso maskiner",
+					"title": "Espresso machines",
 					"image": "https://lh3.googleusercontent.com/d/1VX9k-RMCZfbPdd-MPfHCUaQOP7TKbTuA",
-					"description": "Professionel espressomaskine til hjemmebrug med præcis temperaturkontrol.",
+					"description": "Professional espresso machine for home use with precise temperature control.",
 					"price": 3999
 				},
 				{
 					"id": "kma-002",
-					"title": "Kaffekværne",
+					"title": "Coffee grinders",
 					"image": "https://lh3.googleusercontent.com/d/1QdSrxA1GaTVOZLEpKLdI31MMpl3OBS59",
-					"description": "Konisk kværn med 40 indstillinger for optimal maling til enhver bryggemetode.",
+					"description": "Conical grinder with 40 settings for optimal grinding for any brewing method.",
 					"price": 1299
 				},
 				{
 					"id": "kma-003",
 					"title": "Aeropress",
 					"image": "https://lh3.googleusercontent.com/d/19i3_768tT0-WomzUDGLNHPjN4mcEFLBN",
-					"description": "Innovative kaffepresser som kombinerer immersion og trykfiltrering for en ren kop kaffe.",
+					"description": "Innovative coffee press that combines immersion and pressure filtering for a clean cup of coffee.",
 					"price": 349
 				}
 			]
 		},
 		{
 			"id": "cat-006",
-			"name": "Kaffe udstyr",
+			"name": "Coffee gear",
 			"products": [
 				{
 					"id": "kud-001",
 					"title": "Portafilter",
 					"image": "https://lh3.googleusercontent.com/d/1ltuQwQxxdWhpQp-dbTLZH55nCudCYrot",
-					"description": "Kvalitets portafilter i rustfrit stål, kompatibel med de fleste espressomaskiner.",
+					"description": "High-quality portafilter in stainless steel, compatible with most espresso machines.",
 					"price": 599
 				},
 				{
 					"id": "kud-002",
-					"title": "Vægte",
+					"title": "Coffee scales",
 					"image": "https://lh3.googleusercontent.com/d/1frJr7Bylmhn-rTOkoak53q0VA1NxmAfa",
-					"description": "Præcis digital vægt med timer, ideel til konsistente kaffebrygninger.",
+					"description": "Precise digital scale with a timer, ideal for consistent coffee brewing.",
 					"price": 399
 				},
 				{
 					"id": "kud-003",
 					"title": "Baskets",
 					"image": "https://lh3.googleusercontent.com/d/1Tyyxp7x-MdQMa56KA82dNX3UHwAR9OFB",
-					"description": "Præcisionsfilterbaskets i høj kvalitet for optimal ekstraktion.",
+					"description": "High-quality precision filter baskets for optimal extraction.",
 					"price": 249
 				}
 			]
