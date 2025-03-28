@@ -298,12 +298,13 @@ li {
 
 .product span {
 	font-weight: 700;
-	margin-right: 2rem;
+	margin-right: 1rem;
 }
 
 .product input {
 	width: 2rem;
 	margin-right: 0.5rem;
+    margin-bottom: 5px;
 	height: 30px;
 	text-align: center;
 }
