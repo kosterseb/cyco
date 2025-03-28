@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 	const mainContent = document.getElementById('main');
+	const marQ = document.getElementById('marq');
+	const footer = document.getElementById('footer');
 
 	// Check if the URL has a 'product' query parameter; if yes, skip rendering the list
 	const urlParams = new URLSearchParams(window.location.search);
@@ -8,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	}
 
 	// Set initial marquee content immediately
-	mainContent.innerHTML = `
+	marQ.innerHTML = `
     <div class="marquee">
         <div class="marquee-content"
             <div class="marquee-text">
@@ -68,9 +70,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
 					});
 
 					ul.classList.toggle('show');
+                    let footFoot = document.getElementById('footer');
 
 					if (ul.classList.contains('show')) {
 						title.style.textDecoration = 'underline';
+						footFoot.style.marginTop = '850vh';
+					} else if (!ul.classList.contains('show')) {
+						footFoot.style.marginTop = '60vh';
 					}
 				});
 			});
@@ -78,4 +84,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		.catch(function (error) {
 			console.error('Error loading the JSON file:', error);
 		});
+
+	footer.innerHTML = `			
+    <div class="marquee">
+        <div class="marquee-content"
+		    <div class="marquee-text">
+					RIDE • EXPLORE • CONNECT • ENJOY • RIDE • EXPLORE • CONNECT • ENJOY •
+					RIDE • EXPLORE • CONNECT • ENJOY • RIDE • EXPLORE • CONNECT • ENJOY •
+					RIDE • EXPLORE • CONNECT • ENJOY •
+			</div>
+        </div>
+	</div>
+	<div class="social-links">
+		<a href="#">Instagram</a>
+		<a href="#">Facebook</a>
+		<a href="#">LinkedIn</a>
+	</div>`;
 });
