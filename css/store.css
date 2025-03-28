@@ -15,6 +15,20 @@ html {
 	font-family: Poppins, sans-serif;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 ul {
 	list-style: none;
 }
@@ -172,10 +186,9 @@ a {
 	display: block;
 	min-height: 100vh;
 	margin: 5px;
-	position: absolute;
-	top: 110%;
-	left: 5%;
-	right: 5%;
+    margin-top: 10rem;
+    flex: 1;
+	
 }
 
 .marquee {
@@ -186,7 +199,13 @@ a {
 	padding: 10px 0;
 	width: 100%;
 	position: relative;
-    margin-bottom: 3rem;
+	margin-bottom: 3rem;
+}
+
+
+.marq {
+	position: absolute;
+	top: 11.5%;
 }
 
 .marquee-content {
@@ -215,6 +234,8 @@ a {
 	font-size: 28px;
 	color: var(--primary-color);
 }
+
+/*Products*/
 
 .product-title {
 	cursor: pointer;
@@ -268,7 +289,7 @@ li {
 	margin-bottom: 20px;
 }
 
-/* Åben/skjul */
+/* Åben/skjul produkt kategorier */
 .category-section {
 	overflow: hidden;
 	max-height: 0;
@@ -304,7 +325,7 @@ li {
 .product input {
 	width: 2rem;
 	margin-right: 0.5rem;
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 	height: 30px;
 	text-align: center;
 }
@@ -321,6 +342,24 @@ li {
 	background-color: var(--primary-color);
 	width: 100px;
 	height: 30px;
+}
+
+/*Footer*/
+#footer {
+	background-color: var(--secondary-color);
+	color: var(--secondary-color);
+	text-align: center;
+	width: 100%;
+    padding-bottom: 50px;
+    position: relative;
+	bottom: 0;
+
+}
+
+.social-links a {
+	color: var(--primary-color);
+	margin: 0 10px;
+	text-decoration: none;
 }
 
 /* Media queries */

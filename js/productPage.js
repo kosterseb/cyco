@@ -44,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h2>${product.title}</h2>
                 <img src="${product.image}" alt="${product.title}">
                 <p>${product.description}</p>
-                <span>Price: ${(product.price * 1.25).toLocaleString()} DKK</span>
+                <span>Price: ${(
+									product.price * 1.25
+								).toLocaleString()} DKK</span>
                 
                 <input id="qty-${product.id}" type="number" value="1" min="1">
                 <button onclick="addCart('${
@@ -55,5 +57,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 <a href="storepage.html"><button id="backButton">Back</button></a>
            </div>
         `;
+	}
+
+	if (productId) {
+		let videoSection = document.getElementById('introSection');
+        let mainSection = document.getElementById('main');
+        let marqDiv = document.getElementById('marq');
+		videoSection.style.display = 'none';
+        mainSection.style.top = '20%';
+        
+        marqDiv.innerHTML = `<div class="marquee marq">
+                    <div class="marquee-content">
+                        <div class="marquee-text">
+                        STORE  • STORE • STORE  • STORE • STORE  • STORE • STORE  • STORE • STORE  • STORE • STORE  • STORE • 
+                        </div>
+                     </div>
+                </div>`;
 	}
 });
