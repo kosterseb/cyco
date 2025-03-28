@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// Fetch the JSON data
-	fetch('/JSON/products.json')
+	fetch('JSON/products.json')
 		.then((response) => response.json())
 		.then((json) => {
 			// Find the matching product in all categories
