@@ -1,3 +1,4 @@
+// Getting all the countries from the JSON file
 fetch('/JSON/countries.json')
     .then(response => response.json())
     .then(countries => {
@@ -39,25 +40,18 @@ togglePaymentMethod()
 
 const toggleButton = document.getElementById('toggleButton');
 const itemList = document.getElementById('itemList');
-// New references:
+
 const toggleText = document.getElementById('toggleText');
 const toggleIcon = document.getElementById('toggleIcon');
 
 toggleButton.addEventListener('click', () => {
-  // If the item list is currently visible...
   if (!itemList.classList.contains('hide')) {
-    // Hide it
     itemList.classList.add('hide');
-    // Change text to "Show"
     toggleText.textContent = 'Show';
-    // Reset arrow to point down
     toggleIcon.classList.remove('open');
   } else {
-    // Show the item list
     itemList.classList.remove('hide');
-    // Change text to "Hide"
     toggleText.textContent = 'Hide';
-    // Rotate arrow up
     toggleIcon.classList.add('open');
   }
 });
@@ -75,7 +69,6 @@ function updateOrderSummary() {
     let totalItems = 0;
     let totalPrice = 0;
     
-    // Calculate total items and price
     listCart.forEach(product => {
         totalItems += product.quantity;
         totalPrice += product.quantity * product.price * 1.25;
@@ -121,7 +114,6 @@ function loadCheckoutCart() {
 
     // Build HTML for each cart item
     listCart.forEach(product => {
-        // Create an item element with image and title.
         itemsHTML += `
             <div class="item-page">
               <img src="${product.image}" alt="${product.title}" class="item-image">
@@ -146,21 +138,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const payNowButton = document.querySelector('.pay-now');
-const checkoutForm = document.querySelector('.checkout-form');
-const orderSummary = document.querySelector('.order-summary');
+document.addEventListener('DOMContentLoaded', () => {
+    const payNowButton = document.querySelector('.pay-now');
+    const checkoutForm = document.querySelector('.checkout-form');
+    const orderSummary = document.querySelector('.order-summary');
 
-function movePayNowButton() {
-    if (window.innerWidth > 768) {
-        if (!checkoutForm.contains(payNowButton)) {
-            checkoutForm.appendChild(payNowButton);
-        }
-    } else {
-        if (!orderSummary.contains(payNowButton)) {
-            orderSummary.appendChild(payNowButton);
+    if (!payNowButton || !checkoutForm || !orderSummary) return;
+
+    function movePayNowButton() {
+        if (window.innerWidth > 768) {
+            if (payNowButton.parentElement !== checkoutForm) {
+                checkoutForm.appendChild(payNowButton);
+            }
+        } else {
+            if (payNowButton.parentElement !== orderSummary) {
+                orderSummary.appendChild(payNowButton);
+            }
         }
     }
-}
 
-document.addEventListener('DOMContentLoaded', movePayNowButton);
-window.addEventListener('resize', movePayNowButton);
+    movePayNowButton();
+    window.addEventListener('resize', movePayNowButton);
+});
