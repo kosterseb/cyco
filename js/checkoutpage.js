@@ -1,5 +1,5 @@
 // Getting all the countries from the JSON file
-fetch('/JSON/countries.json')
+fetch('JSON/countries.json')
     .then(response => response.json())
     .then(countries => {
         const selectElement = document.getElementById('country');
