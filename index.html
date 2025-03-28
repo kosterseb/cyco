@@ -8,17 +8,28 @@
     <meta name="keywords" content="Bicycle, Cykler, Coffee, Kaffe, CY CO, CYCO">
     <meta name="author" content="CYCO, CY | CO">
     <title>CY | CO - Bicycle Café</title>
-    <script src="js/general.js"></script>
+    <script src="js/general.js" defer></script>
+    <script src="js/checkoutindes.js" defer></script>
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/checkoutindex.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://drive.google.com/thumbnail?id=1JnB1PmeI6yccoF-ipiGxzOUAUlrvCiWf"
         type="image/x-icon">
+        
 </head>
 
 <body>
+    
     <header>
+        <div class="shop-icon">
+            <i class="icon fa-solid fa-bicycle"></i>
+            <div class="totalProducts" id="totalProducts">0</div>
+        </div>
         <div class="logo2">
             <a href="index.html">
                 <h1>CY | CO</h1>
@@ -32,6 +43,7 @@
             <a href="storepage.html"> SHOP |</a>
             <a href="about.html"> CONTACT |</a>
         </nav>
+        
     </header>
 
     <main>
@@ -114,7 +126,7 @@
             <section class="hero">
                 <div>
                     <h3>Use code 'GOCOFFEE20' for 20% off your first purchase</h3>
-                    <button input="submit"><a href="storepage.html">Shop</a></button>
+                    <button class="button" input="submit"><a href="storepage.html">Shop</a></button>
                 </div>
                 <video autoplay muted loop playsinline canplaythrough
                     src="https://videos.pexels.com/video-files/3772669/3772669-hd_1920_1080_25fps.mp4" type="video/mp4">
@@ -179,37 +191,37 @@
                         <h3>Bicycle Maintenance Workshop</h3>
                         <p>Learn basic bike repair skills</p>
                         <span>Next: May 10, 2025</span>
-                        <button input="submit">ATTEND</button>
+                        <button class="button" input="submit">ATTEND</button>
                     </div>
                     <div class="event">
                         <h3>Full Moon Bike Ride</h3>
                         <p>Monthly night cycling event</p>
                         <span>Next: May 25, 2025</span>
-                        <button input="submit">ATTEND</button>
+                        <button class="button" input="submit">ATTEND</button>
                     </div>
                     <div class="event">
                         <h3>How To Coffee</h3>
                         <p>Full tasting class of coffee</p>
                         <span>Next: August 15, 2025</span>
-                        <button input="submit">ATTEND</button>
+                        <button class="button" input="submit">ATTEND</button>
                     </div>
                     <div class="event">
                         <h3>Full Moon Bike Ride</h3>
                         <p>Monthly night cycling event</p>
                         <span>Next: April 25, 2025</span>
-                        <button input="submit">ATTEND</button>
+                        <button class="button" input="submit">ATTEND</button>
                     </div>
                     <div class="event">
                         <h3>Espresso-Mezzo</h3>
                         <p>5 points with tasting</p>
                         <span>Next: May 2, 2025</span> <br>
-                        <button input="submit">ATTEND</button>
+                        <button class="button" input="submit">ATTEND</button>
                     </div>
                     <div class="event">
                         <h3>Full Moon Bike Ride</h3>
                         <p>Monthly night cycling event</p>
                         <span>Next: July 25, 2025</span>
-                        <button input="submit">ATTEND</button>
+                        <button class="button" input="submit">ATTEND</button>
                     </div>
                 </div>
             </div>
@@ -995,16 +1007,17 @@
         </div>
     </div>
 
+    
     <footer>
         <div class="social-links">
             <a href="#">Instagram</a>
             <a href="#">Facebook</a>
             <a href="#">LinkedIn</a>
         </div>
-
+        
     </footer>
-
-
+    
+    <div id="checkoutContainer" class="button-shop"></div>
 </body>
 
 </html>

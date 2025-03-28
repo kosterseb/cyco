@@ -390,7 +390,7 @@ footer {
 
 }
 
-button {
+.button {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: none;
@@ -399,6 +399,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.button:hover {
     background-color: var(--accent-color);
 }

@@ -1,4 +1,4 @@
-button {
+.button-shop {
     cursor: pointer;
     border: none;
     outline: none;
@@ -48,9 +48,11 @@ ul {
     cursor: pointer;
     padding: 1rem; 
     display: inline-block;
-    font-size: 3.5rem;
-    position: relative;
-    z-index: 1;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 100;
+    left: 80%;
+    top: -1%;
 }
 
 .shop-icon .totalProducts {
@@ -61,7 +63,7 @@ ul {
     color: #ffffff;
     border-radius: 50%;
     padding: 0.25rem 0.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
     transform: translate(50%, -50%);
     z-index: 2;
@@ -234,5 +236,30 @@ ul {
     .checkout-item-img {
         width: 10rem;
         height: 10rem;
+    }
+
+    .shop-icon {
+        cursor: pointer;
+        padding: 1rem; 
+        display: inline-block;
+        font-size: 1.85rem;
+        position: absolute;
+        z-index: 100;
+        left: 95%;
+        top: -7%;
+    }
+
+    .shop-icon .totalProducts {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #000000;
+        color: #ffffff;
+        border-radius: 50%;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.6rem;
+        text-align: center;
+        transform: translate(50%, -50%);
+        z-index: 2;
     }
 }
