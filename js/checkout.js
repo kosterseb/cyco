@@ -19,7 +19,7 @@ const CartModule = (function() {
 
     // Getting the data for the JSON file
     function fetch_products() {
-        fetch('/JSON/products.json')
+        fetch('JSON/products.json')
           .then(response => response.json())
           .then(data => {
             products = data;
