@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     </div>    
     `;
 
-	fetch('/JSON/products.json')
+	fetch('JSON/products.json')
 		.then(function (response) {
 			return response.json();
 		})
