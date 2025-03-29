@@ -143,7 +143,7 @@ const CartModule = (function() {
       // Update the total price
       const totalPriceElem = document.querySelector('.total-price');
       if (totalPriceElem) {
-        totalPriceElem.textContent = totalPrice.toFixed(2) + ' kr';
+        totalPriceElem.textContent = totalPrice.toLocaleString() + ' kr';
       }
     }
   
